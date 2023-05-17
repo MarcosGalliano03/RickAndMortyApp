@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 const CardFav = (props) => {
 
-   const { id, name, gender, species, image, status, origin, onClose, addFav, removeFav, myFavorites } = props
+   const { id, name, gender, species, image, status, origin, addFav, removeFav, myFavorites } = props
 
    const [isFav, setIsFav] = useState(false)
 
@@ -23,7 +23,7 @@ const CardFav = (props) => {
             setIsFav(true);
          }
       });
-   }, [myFavorites]);
+   }, [myFavorites, id]);
 
    const handleFavorite = () => {
       if (isFav) {

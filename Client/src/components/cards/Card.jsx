@@ -42,7 +42,7 @@ const Card = (props) => {
         setIsFav(true);
       }
     });
-  }, [myFavorites]);
+  }, [myFavorites, id]);
 
   const handleFavorite = () => {
     if (isFav) {

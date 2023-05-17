@@ -2,7 +2,7 @@ function validate(userData) {
   let errors = {};
 
   // Validar el nombre de usuario como un email con una expresión regular
-  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const emailRegex = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
   if (!emailRegex.test(userData.email)) {
     errors.email = "El email ingresado no es válido";
   }
